@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="all">
+<title>개인정보처리방침 · 오늘의 사주</title>
+<style>
+  :root{color-scheme:light dark;--bg:#F7F6F2;--card:#FFFFFF;--fg:#1B1A22;--muted:#6B6775;--line:#E7E4DC;--accent:#5B53D6}
+  @media(prefers-color-scheme:dark){:root{--bg:#15141A;--card:#1E1D26;--fg:#ECEAF2;--muted:#9A95A6;--line:#2C2A36;--accent:#9A93F0}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7}
+  main{max-width:720px;margin:0 auto;padding:32px 20px 80px}
+  .doc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 24px}
+  h1{font-size:1.5rem;margin:0 0 4px} h2{font-size:1.15rem;margin:1.8em 0 .4em;padding-top:.6em;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none;padding-top:0} h3{font-size:1rem;margin:1.4em 0 .3em}
+  p,li{font-size:.95rem} ul{padding-left:1.2em} li{margin:.25em 0} a{color:var(--accent);word-break:break-all}
+  hr{border:none;border-top:1px solid var(--line);margin:1.6em 0}
+  table{width:100%;border-collapse:collapse;font-size:.85rem;margin:.6em 0} th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top} th{background:rgba(91,83,214,.07)}
+  .meta{color:var(--muted);font-size:.82rem;margin:0 0 1.2em} .nav{margin-bottom:16px;font-size:.85rem} .nav a{margin-right:14px}
+</style></head><body><main>
+  <div class="nav"><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용약관</a></div>
+  <div class="doc"><p class="meta">시행일 · 최종 수정일: 2026-10-17 · 오늘의 사주</p>
+<h1>개인정보처리방침</h1>
+<hr>
+<h2>1. 수집하는 정보</h2>
+<table>
+<thead><tr><th>항목</th><th>예</th><th>민감도</th></tr></thead><tbody>
+<tr><td>생년월일·출생시각·성별·출생지(경도)</td><td>명식 계산 입력 (계산 서버 전송 + 클라우드 저장)</td><td><strong>민감정보(개인 식별·성향 추론 가능)</strong></td></tr>
+<tr><td>저장한 명식/풀이</td><td>보관함</td><td>사용자가 직접 저장한 것</td></tr>
+<tr><td>(선택) 질문 텍스트</td><td>사주 대화 입력</td><td>사용자 입력</td></tr>
+<tr><td>(자동) 기기·앱 기본 로그</td><td>오류·사용량</td><td>일반</td></tr>
+</tbody>
+</table>
+<ul>
+<li>계정·연락처·위치·연락망은 수집하지 않습니다. 로그인은 <strong>익명 인증</strong>(이메일·전화번호 등 식별정보 없이 기기에 발급되는 익명 식별자)으로만 처리하며, 회원가입 절차나 개인 식별정보 수집이 없습니다.</li>
+</ul>
+<h2>2. 저장 위치</h2>
+<ul>
+<li>저장한 명식(사람) 정보와 보관한 풀이는 <strong>클라우드 데이터베이스(Supabase, 리전: 대한민국 서울)</strong> 에 저장됩니다. 각 이용자는 익명 식별자 단위로 격리되며(행수준 보안·RLS), 다른 이용자는 접근할 수 없습니다.</li>
+<li>저장되는 명식(사람) 정보에는 <strong>생년월일·출생시각·성별·출생지(경도)</strong> 가 포함됩니다.</li>
+<li>보관한 풀이에는 <strong>생년월일 원문이 저장되지 않고</strong>, 요약 라벨(예: &quot;경오 신사 경진 계미&quot;)과 풀이 본문만 저장됩니다.</li>
+<li>앱 내에서 개별·전체 삭제가 가능하며, 삭제 시 클라우드에서도 제거됩니다. (앱 삭제만으로는 클라우드 저장분이 지워지지 않을 수 있으니, 삭제를 원하면 앱 내에서 삭제하거나 문의처로 요청하세요.)</li>
+<li>참고: 서버 키가 설정되지 않은 구성에서는 기기 내부(로컬)에만 저장되도록 동작합니다.</li>
+</ul>
+<h2>3. 서버 전송 및 제3자 처리 (중요)</h2>
+<ul>
+<li><strong>(가) 명식 계산 — 당사 계산 서버</strong>: 입력한 <strong>생년월일·출생시각·성별·출생지(경도)</strong> 는 정확한 만세력(진태양시·절기 보정) 계산을 위해 <strong>당사 계산 서버로 전송</strong>되어 처리됩니다. 계산 서버는 산출된 명식을 돌려주며, 원문을 영구 저장하지 않습니다.</li>
+<li><strong>(나) AI 해석 — Anthropic(Claude API) 위탁</strong>: &#x27;풀이&#x27;를 생성하기 위해, <strong>명식에서 산출된 데이터</strong>(일간·오행·십신·일진·세운/대운 등)와 대화 질문을 <strong>AI 처리 위탁사(Anthropic)</strong> 로 당사 중계 서버를 거쳐 전송합니다. AI에는 <strong>원문 생년월일 대신 계산된 명식 데이터</strong>를 전송하도록 설계되어 있습니다.</li>
+<li>모든 전송 구간은 <strong>HTTPS로 암호화</strong>됩니다.</li>
+<li>Anthropic의 데이터 처리 정책: 개인정보처리방침 <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a> · 상업 이용약관 <a href="https://www.anthropic.com/legal/commercial-terms">https://www.anthropic.com/legal/commercial-terms</a> . Anthropic은 API로 전송된 데이터를 모델 학습에 사용하지 않으며, 당사는 풀이 생성에 필요한 범위로만 위탁합니다.</li>
+<li>공유 카드에는 <strong>생년월일이 포함되지 않습니다</strong>(풀이 요약·브랜딩만).</li>
+</ul>
+<h2>4. 이용 목적</h2>
+<ul>
+<li>사주 명식 계산, 운세·궁합·올해의 운 풀이 제공, 저장/다시보기, 서비스 개선·오류 대응.</li>
+</ul>
+<h2>5. 보유 및 파기</h2>
+<ul>
+<li>저장 데이터(클라우드): 이용자가 앱에서 삭제하거나 삭제를 요청할 때까지 보관합니다. 보관함 항목은 개별/전체 삭제가 가능합니다.</li>
+<li>중계 서버: 풀이 생성에 필요한 처리만 수행하며 <strong>원문 생년월일을 영구 저장하지 않습니다.</strong> 생성된 풀이는 재호출 비용 절감을 위해 <strong>해시 키(원문 복원 불가) 기반 캐시</strong>에 임시 보관되며, 서버 인스턴스 재배포·재시작 시 소멸합니다. 프로덕션에서는 사용자 입력(명식·질문)을 처리 로그로 디스크에 남기지 않습니다.</li>
+</ul>
+<h2>6. 이용자 권리</h2>
+<ul>
+<li>저장 데이터 열람·삭제: 앱 내 보관함에서 직접(개별/전체 삭제, 앱 삭제 시 로컬 데이터 소멸). 문의: darkname10@gmail.com.</li>
+<li>동의 철회·처리 정지 요청: [절차].</li>
+</ul>
+<h2>7. 아동</h2>
+<ul>
+<li>본 서비스는 만 14세 미만 아동을 주 이용 대상으로 하지 않으며, 만 14세 미만의 개인정보를 수집하지 않습니다.</li>
+</ul>
+<h2>8. 결제</h2>
+<ul>
+<li>구독·단품 결제는 <strong>Apple App Store / Google Play</strong>를 통해 처리되며, 당사는 카드번호 등 결제수단 정보를 저장하지 않습니다. 결제·환불은 각 스토어 정책을 따릅니다.</li>
+</ul>
+<h2>9. 문의처 / 변경</h2>
+<ul>
+<li>개인정보 보호책임자: 서비스 운영자 · darkname10@gmail.com</li>
+<li>본 방침 변경 시 앱/스토어에 공지합니다. 시행일: [YYYY-MM-DD — 출시일로 확정]</li>
+</ul>
+<hr>
+  </div></main></body></html>
